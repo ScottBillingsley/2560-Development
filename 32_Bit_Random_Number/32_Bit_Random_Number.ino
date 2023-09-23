@@ -135,8 +135,8 @@ volatile uint8_t random_number = 0;
 
 /**************************  Functions ****************************/
 /* Get a random number between from and to */
-uint8_t get_random(uint8_t floor, uint8_t celing){
-  float coef = (1.0 / ((float)255 / (float)(celing - floor)));
+uint8_t get_random(uint8_t floor, uint8_t ceiling){
+  float coef = (1.0 / ((float)255 / (float)(ceiling - floor)));
   uint8_t r = (floor + (byte)((float)random_number * coef));  
   return r;
 }
